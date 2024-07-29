@@ -1,10 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import { colors } from '../global/colors'
 
-const Header = (props) => {
+const Header = ({title}) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>{props.title}</Text>
+      <Text style={styles.text}>{title}</Text>
     </View>
   )
 }
@@ -12,13 +13,16 @@ const Header = (props) => {
 export default Header
 
 const styles = StyleSheet.create({
-    container:{
-        backgroundColor:'gray',
-        height:80,
-        justifyContent:'center',
-        alignItems:'center'
-    },
-    text:{
-        fontSize:30
-    }
-})
+  container: {
+    width: "100%",
+    height: 70,
+    backgroundColor: colors.green900,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  text: {
+    color: colors.green300,
+    fontSize: 22,
+    fontFamily: 'Poppins'
+  },
+});

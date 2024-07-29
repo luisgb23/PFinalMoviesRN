@@ -1,18 +1,53 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React from "react";
+import { StyleSheet, View, FlatList, Text } from "react-native";
+import CategoryItem from "../components/CategoryItem";
+import { colors } from "../global/colors";
+import categories from "../data/categories.json";
+import { useGetCategoriesQuery } from "../services/shopServices";
 
-import Categories from '../components/Categories'
-import Header from '../components/Header'
 
-const Home = () => {
+const Home = ({ navigation, route }) => {
+  const {data: categories} = useGetCategoriesQuery()
   return (
-    <View style={{width:'100%'}}>
-      <Header title='Categorias'/>
-      <Categories/>
-    </View>
-  )
-}
+      <>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>Our Catalog</Text>
+        </View>
+        <View style={styles.flatListContainer}>
+          <FlatList
+              showsVerticalScrollIndicator={false}
+              keyExtractor={(category) => category}
+              data={categories}
+              renderItem={({ item }) => (
+                  <CategoryItem category={item} navigation={navigation} />
+              )}
+          />
+        </View>
+      </>
+  );
+};
 
-export default Home
+export default Home;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  flatListContainer: {
+    width: "100%",
+    backgroundColor: colors.green300,
+    flex: 1,
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 10,
+  },
+  titleContainer: {
+    backgroundColor: colors.green300,
+  },
+  title:{
+    fontSize: 40,
+    fontWeight:'bold',
+    color: colors.white,
+    marginTop:30,
+    marginBottom: 30,
+    marginLeft:20
+  }
+});
