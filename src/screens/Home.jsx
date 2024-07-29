@@ -2,7 +2,6 @@ import React from "react";
 import { StyleSheet, View, FlatList, Text } from "react-native";
 import CategoryItem from "../components/CategoryItem";
 import { colors } from "../global/colors";
-import categories from "../data/categories.json";
 import { useGetCategoriesQuery } from "../services/shopServices";
 
 
