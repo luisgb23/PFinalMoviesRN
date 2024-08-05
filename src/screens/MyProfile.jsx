@@ -73,11 +73,12 @@ const styles = StyleSheet.create({
   img: {
     height: 200,
     width: 200,
-    borderRadius: 100
+    borderRadius: 100,
+    marginTop: 10
   },
   btn: {
     marginTop: 10,
-    backgroundColor: colors.green700,
+    backgroundColor: colors.white,
     width: "80%",
     justifyContent: 'center',
     alignItems: 'center',

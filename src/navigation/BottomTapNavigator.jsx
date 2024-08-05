@@ -101,7 +101,7 @@ export default BottomTapNavigator
 
 const styles = StyleSheet.create({
   tabBar: {
-    backgroundColor: colors.green700,
+    backgroundColor: '#4B70F5',
     height: 60
   }
 })

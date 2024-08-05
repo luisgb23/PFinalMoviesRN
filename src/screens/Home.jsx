@@ -10,7 +10,7 @@ const Home = ({ navigation, route }) => {
   return (
       <>
         <View style={styles.titleContainer}>
-          <Text style={styles.title}>Our Catalog</Text>
+          <Text style={styles.title}>Coder Shop</Text>
         </View>
         <View style={styles.flatListContainer}>
           <FlatList
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   title:{
     fontSize: 40,
     fontWeight:'bold',
-    color: colors.white,
+    color: '#131842',
     marginTop:30,
     marginBottom: 30,
     marginLeft:20

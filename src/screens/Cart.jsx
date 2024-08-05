@@ -32,7 +32,7 @@ const Cart = () => {
       </View>
       <View style={styles.confirmContainer}>
         <Pressable style={styles.buttonConfirm} onPress={onConfirmOrder}>
-          <Text>Confirm Order</Text>
+          <Text style={styles.textConfirm}>Confirm Order</Text>
         </Pressable>
       </View>
     </View>
@@ -64,12 +64,16 @@ const styles = StyleSheet.create({
     width: "80%",
     height: 50,
     borderRadius: 10,
-    borderWidth: 1,
-    backgroundColor: colors.green700,
+    borderWidth: 2,
+    backgroundColor: 'white',
     justifyContent: "center",
     alignItems: "center",
     padding: 8,
     marginTop: 15,
     color: 'white'
+  },
+  textConfirm:{
+    fontSize:18,
+    fontFamily: "Poppins"
   }
 });

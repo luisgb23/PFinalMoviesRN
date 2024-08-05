@@ -5,7 +5,7 @@ import { colors } from "../global/colors";
 const AddButton = ({
     title = "",
     onPress = () => {},
-    color = colors.green700,
+    color = colors.white,
 }) => {
     return (
         <Pressable
@@ -24,8 +24,8 @@ const styles = StyleSheet.create({
         width: "80%",
         height: 50,
         borderRadius: 10,
-        borderWidth: 1,
-        backgroundColor: colors.green700,
+        borderWidth: 2,
+        backgroundColor: colors.white,
         justifyContent: "center",
         alignItems: "center",
         padding: 8,
@@ -34,6 +34,6 @@ const styles = StyleSheet.create({
     text: {
         fontFamily: "Poppins",
         fontSize: 18,
-        color: colors.green300,
+        color: 'black',
     },
 });

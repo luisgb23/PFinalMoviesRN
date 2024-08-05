@@ -13,7 +13,7 @@ export default Card
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: colors.lightGray,
+    backgroundColor: '#EEEEEE',
     shadowColor: colors.green900,
     width: 250,
     height: 40,

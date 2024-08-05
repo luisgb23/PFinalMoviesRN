@@ -41,7 +41,8 @@ const styles = StyleSheet.create({
   text: {
     fontFamily: "Poppins",
     fontSize: 19,
-    color: colors.green300,
+    color: 'black',
+    fontWeight:'bold'
   },
   text2: {
     fontFamily: "Josefin",

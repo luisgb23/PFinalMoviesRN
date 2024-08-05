@@ -54,9 +54,9 @@ const styles = StyleSheet.create({
     width: 250,
     padding: 8,
     fontSize: 18,
-    backgroundColor: colors.green700,
+    backgroundColor: '#CAF4FF',
     color: colors.white,
-    borderRadius: 10,
+    borderRadius: 20,
   },
   errorText: {
     color: colors.white,
