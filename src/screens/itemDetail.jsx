@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 import {
-  Button,
   Image,
+  Pressable,
   StyleSheet,
   Text,
   View,
@@ -13,7 +13,7 @@ import {
 import { useGetProductByIdQuery } from "../services/shopServices";
 import { useDispatch } from "react-redux";
 import { addCartItem } from "../features/Cart/CartSlice";
-import AddButton from "../components/AddButton";
+import AddButtonCart from "../components/AddButtonCart";
 
 
 const ItemDetail = ({ route, navigation }) => {
@@ -37,7 +37,6 @@ const handleAddCart = () => {
 
   return (
     <View>
-      <Button onPress={() => navigation.goBack()} title="Back" />
       {product ? (
         <View
           style={
@@ -64,7 +63,10 @@ const handleAddCart = () => {
             <Text style={styles.textItems}>{product.description}</Text>
             <Text style={styles.price}> ${product.price}</Text>
             <View style={styles.button} >
-              <AddButton title="Add to cart" onPress={handleAddCart} />
+              <AddButtonCart title="Add to cart" onPress={handleAddCart} />
+              <Pressable style={styles.btnBack} onPress={() => navigation.goBack()}>
+                <Text style={styles.textBack}>Back</Text>
+              </Pressable>
             </View>
           </View>
         </View>
@@ -120,7 +122,25 @@ const styles = StyleSheet.create({
     fontSize:14
   },
   button:{
+    flexDirection:'row',
     justifyContent:'center',
     alignItems:'center'
+  },
+  btnBack:{
+    width: "45%",
+    height: 50,
+    borderRadius: 10,
+    borderWidth: 2,
+    backgroundColor: '#021526',
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 8,
+    marginTop: 15,
+    marginLeft:10
+  },
+  textBack:{
+    color:'white',
+    fontFamily: "Poppins",
+    fontSize: 18
   }
 });

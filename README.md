@@ -2,7 +2,7 @@
 
 
 # Ecommerce
-## _Proyecto Final ReactNative con integración a Firebase Realtime database
+## Proyecto Final ReactNative con integración a Firebase Realtime database
 
 
 
