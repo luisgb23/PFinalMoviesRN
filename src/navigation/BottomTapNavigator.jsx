@@ -26,7 +26,7 @@ const BottomTapNavigator = () => {
       })}
     >
       <Tab.Screen
-        name="Shop"
+        name="Tienda"
         component={HomeStackNavigator}
         options={{
           tabBarIcon: ({ focused }) => {
@@ -43,7 +43,7 @@ const BottomTapNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Cart"
+        name="Mi carrito"
         component={CartStackNavigator}
         options={{
           tabBarIcon: ({ focused }) => {
@@ -60,7 +60,7 @@ const BottomTapNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="Order"
+        name="Ordenes"
         component={OrderStackNavigator}
         options={{
           tabBarIcon: ({ focused }) => {
@@ -77,7 +77,7 @@ const BottomTapNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="My Buttom Profile"
+        name="Mi perfil"
         component={MyProfileStackNavigator}
         options={{
           tabBarIcon: ({ focused }) => {

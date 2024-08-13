@@ -14,7 +14,7 @@ const Cart = () => {
 
   const onConfirmOrder = () => {
     triggerPostOrder({items: CartData, user: "mail@mail.com", total})
-    Alert.alert("Order successfully confirmed")
+    Alert.alert("Orden confirmada satisfactoriamente")
   }
 
   return (
@@ -32,7 +32,7 @@ const Cart = () => {
       </View>
       <View style={styles.confirmContainer}>
         <Pressable style={styles.buttonConfirm} onPress={onConfirmOrder}>
-          <Text style={styles.textConfirm}>Confirm Order</Text>
+          <Text style={styles.textConfirm}>Confirmar Orden</Text>
         </Pressable>
       </View>
     </View>

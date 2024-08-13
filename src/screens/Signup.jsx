@@ -66,28 +66,28 @@ const Signup = ({ navigation }) => {
   return (
     <View style={styles.main}>
       <View style={styles.container}>
-        <Text style={styles.title}>Signup</Text>
+        <Text style={styles.title}>Crear cuenta</Text>
         <InputForm
-          label={"email"}
+          label={"Email"}
           onChange={setEmail}
           error={errorMail}
         />
         <InputForm
-          label={"password"}
+          label={"Contraseña"}
           onChange={setPassword}
           error={errorPassword}
           isSecure={true}
         />
         <InputForm
-          label={"confirm password"}
+          label={"Confirmar contraseña"}
           onChange={setconfirmPassword}
           error={errorConfirmPassword}
           isSecure={true}
         />
-        <SubmitButton onPress={onSubmit} title="Send" />
-        <Text style={styles.sub}>Already have an account?</Text>
+        <SubmitButton onPress={onSubmit} title="Ingresar" />
+        <Text style={styles.sub}>Ya tienes una cuenta?</Text>
         <Pressable onPress={() => navigation.navigate("Login")}>
-          <Text style={styles.subLink}>Login</Text>
+          <Text style={styles.subLink}>Ir a Iniciar sesión</Text>
         </Pressable>
       </View>
     </View>

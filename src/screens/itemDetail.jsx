@@ -63,9 +63,9 @@ const handleAddCart = () => {
             <Text style={styles.textItems}>{product.description}</Text>
             <Text style={styles.price}> ${product.price}</Text>
             <View style={styles.button} >
-              <AddButtonCart title="Add to cart" onPress={handleAddCart} />
+              <AddButtonCart title="Comprar" onPress={handleAddCart} />
               <Pressable style={styles.btnBack} onPress={() => navigation.goBack()}>
-                <Text style={styles.textBack}>Back</Text>
+                <Text style={styles.textBack}>Volver</Text>
               </Pressable>
             </View>
           </View>

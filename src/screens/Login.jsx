@@ -47,19 +47,18 @@ const Login = ({ navigation }) => {
   return (
     <View style={styles.main}>
       <View style={styles.container}>
-        <Text style={styles.title}>Login to start</Text>
-        <InputForm label={"email"} onChange={setEmail} error={""} />
+        <Text style={styles.title}>CoderShop</Text>
+        <InputForm label={"Email"} onChange={setEmail} error={""} />
         <InputForm
-          label={"password"}
+          label={"Contraseña"}
           onChange={setPassword}
           error={""}
           isSecure={true}
         />
-        <SubmitButton onPress={onSubmit} title="Send" />
-        <Text style={styles.sub}>Not have an account?</Text>
+        <SubmitButton onPress={onSubmit} title="Iniciar sesión" />
 
         <Pressable onPress={() => navigation.navigate("Signup")}>
-          <Text style={styles.subLink}>Sign up</Text>
+          <Text style={styles.subLink}>Crear cuenta</Text>
         </Pressable>
       </View>
     </View>
@@ -85,7 +84,7 @@ const styles = StyleSheet.create({
     borderRadius: 10
   },
   title: {
-    fontSize: 22,
+    fontSize: 28,
     fontFamily: "Poppins",
   },
   sub: {
