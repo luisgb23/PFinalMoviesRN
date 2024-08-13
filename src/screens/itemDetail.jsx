@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import {
+  Alert,
   Image,
   Pressable,
   StyleSheet,
@@ -33,6 +34,7 @@ const ItemDetail = ({ route, navigation }) => {
 const handleAddCart = () => {
   dispatch(addCartItem)
   dispatch(addCartItem({...product, quantity: 1}))
+  Alert.alert("Producto agregado al carrito")
 }
 
   return (
